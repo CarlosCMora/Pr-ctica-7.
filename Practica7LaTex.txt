@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Práctica7Desarrollo de programas en C}
+\author{\huge{\texttt{Castañeda Mora Carlos\\\texttt{
+\huge{González Bretón Arturo\\\texttt{
+\huge{Paniagua Bautista Daniel}}}}}}}
+
+\date{26 Septiembre 2019}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\justify
+Los compiladores reservan determinados términos ó palabras claves (keywords), para el uso sintáctico del lenguaje, tales como: asm, auto, break, case, char, do, for, etc. Si bien estas palabras están definidas para el ANSI C, los distintos compiladores extienden esta definición a otros términos, por lo que es aconsejable leer la tabla completa de palabras reservadas del compilador que se vaya a usar, para no utilizarlas en nombres de variables.
+
+Para crear una variable en un lugar determinado del un programa escribiremos primero el tipo de variable y luego el identificador con el que queremos nombrar la variable, seguido todo de un ';'. A esto se le denomina definir una variable. La forma general de la definición es:
+
+tipo lista_identificadores;
+Por ejemplo:
+
+	int numero;	 crea la variable numero, de tipo número entero 
+	char letra;	 crea la variable letra, de tipo carácter
+	float a, b;	 crea dos variables a y b, de tipo número de coma flotante 
+Las variables se pueden inicializar, es decir, establecer un valor inicial, en el momento de creación. Para ello, detrás del identificador ponemos el carácter '=' seguido del valor inicial. Los valores iniciales pueden ser cualquier constante válida para el tipo de variable que creemos. Por ejemplo:
+
+	int numero = 0;		 crea la variable entera numero
+				 y la inicializa a 0
+	char letra = 'p';	 crea la variable carácter letra
+				 y la inicializa a 'p' 
+	float a=57.1, b=1.2E-5;	 crea las variables a y b,
+				 de tipo número de coma flotante, y los inicializa
+				 a 57.1 y 0.000012, respectivamente
+
+\section{\huge{\textbf{Desarrollo}}}
+
+\paragraph{\Large{1)Valores de tipo entero.\\}}
+\includegraphics[Width=11cm,height=6cm]{10.png}
+\includegraphics[Width=11cm,height=6cm]{11.png}
+\includegraphics[Width=11cm,height=6cm]{13.png}
+
+
+\paragraph{\Large{2)Valores de tipo decimal.\\}}
+\includegraphics[Width=11cm,height=6cm]{20.png}
+
+
+\paragraph{\Large{3)Variable de tipo Bool y caracter.\\}}
+\includegraphics[Width=11cm,height=6cm]{23.png}
+
+
+\paragraph{\Large{4)Comparaciòn de nùmeros.\\}}
+\includegraphics[Width=11cm,height=6cm]{30.png}
+\includegraphics[Width=11cm,height=6cm]{31.png}
+
+
+
+
+
+
+\section{Conclusion}
+\justify
+Al escribir el código es necesario identificar con claridad qué tipo de datos son los adecuados para resolver el problema ya que cada una tiene características que limitan su funcionamiento, por ejemplo un dato tipo int tiene un rango de -2,147,483,638 a 2,147,483,637, pero si sobrepasamos este valor obenemos 2,147,483,637, es decir, que si el número que utilizamos está fuera de rango el intérprete nos proporciona otro, esto producirá errores en el resultado final.
+En lenguaje C existen tipos de datos con nombres diferentes como signed int e int, que realizan la misma función. Daniel
+
+
+
+En está práctica aprendimos a diferenciar los tipos de variables que encontramos en un código, para administrar correctamente la memoria y no quedarnos cortos al manejar variables demasiado grandes, por ejemplo, cuando sobre pasas el máximo de una variable, sólo representa el número mayor, por lo que perderíamos información,que en algunos casos puede ser fatal. Tambien es necesario optimizar este tipo de variables, por ejemplo, si los números con los que vamos a trabajar tienen pocos dígitos, no es necesario declarar un tipo long, pues estás reservando un trozo más grande dde la memoria, en pocas palabras, no estás optimizando tu programa. Carlos.
+\section{Bibliografía}
+
+https://es.wikipedia.org/wiki/C_(lenguaje_de_programaci%C3%B3n)
+http://platea.pntic.mec.es/vgonzale/cyr_0204/cyr_01/control/lengua_C/variables.htm
+\end{document}
+
